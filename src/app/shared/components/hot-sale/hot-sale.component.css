@@ -1,0 +1,26 @@
+.card {
+  border: none;
+  border-radius: 0.75rem;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+.btn-light:hover {
+  background-color: #f8d7da;
+}
+
+.product-name {
+  transition: color 0.3s;
+}
+
+.product-name:hover {
+  color: #8B4513; /* nâu đất đỏ */
+  cursor: pointer;
+}

@@ -1,0 +1,17 @@
+/* Dropdown hover mở */
+.hover-dropdown:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+/* Dropdown cho mobile (bấm toggle) */
+@media (max-width: 991px) {
+  .hover-dropdown:hover > .dropdown-menu {
+    display: none; /* Mobile không hover */
+  }
+}
+/* Header dropdown hover */
+#accountDropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* optional: sát vào li */
+}

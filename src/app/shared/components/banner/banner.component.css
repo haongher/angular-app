@@ -1,0 +1,22 @@
+.text-gradient {
+  background: linear-gradient(90deg, #ff4d4d, #6a5af9);
+  background-clip: text; /* chuẩn */
+  -webkit-background-clip: text; /* hỗ trợ Chrome/Safari */
+  color: transparent; /* fallback */
+  -webkit-text-fill-color: transparent; /* Chrome/Safari */
+}
+.bg-light-blue {
+  background-color: #e9f3fb;
+}
+
+.bg-light-pink {
+  background-color: #fdecee;
+}
+
+.bg-light-yellow {
+  background-color: #fff9e6;
+}
+
+.bg-light-green {
+  background-color: #e7f9ed;
+}

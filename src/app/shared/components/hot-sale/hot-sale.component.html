@@ -1,0 +1,58 @@
+<!-- Hot Sale Section -->
+<div class="container my-5">
+    <div class="bg-danger text-white rounded p-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold m-0">HOT SALE CUỐI TUẦN 🔥</h2>
+            <small>Chương trình đã hết hạn</small>
+        </div>
+
+        <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-3" *ngFor="let product of products">
+                <div class="card position-relative h-100 shadow-sm">
+
+                    <!-- Ribbon giảm giá -->
+                    <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded-end small">
+                        Giảm {{product.discount}}%
+                    </div>
+
+                    <!-- Ảnh sản phẩm -->
+                    <img [src]="product.image" class="card-img-top" alt="{{product.name}}"
+                        style="height: 250px; object-fit: contain;">
+
+                    <div class="card-body p-2">
+                        <div class="d-flex justify-content-between mb-2">
+                            <small class="badge bg-danger">Trả góp 0%</small>
+                            <small class="badge bg-warning text-dark">BH {{product.warranty}} tháng</small>
+                        </div>
+
+                        <!-- Tên sản phẩm -->
+                        <h6 class="card-title small mb-2 product-name">{{product.name}}</h6>
+
+                        <!-- Giá -->
+                        <div>
+                            <del class="text-muted small">{{product.oldPrice | number}}đ</del>
+                            <div class="text-danger fw-bold">{{product.newPrice | number}}đ</div>
+                        </div>
+
+                        <!-- Thông tin ưu đãi thêm -->
+                        <div *ngIf="product.note" class="bg-light rounded p-1 small mt-2">
+                            {{product.note}}
+                        </div>
+
+                        <!-- Số lượng bán -->
+                        <div class="d-flex align-items-center bg-light rounded p-1 small mt-2">
+                            <span class="me-1">🔥</span> Đã bán {{product.sold}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nút xem tất cả -->
+        <div class="text-center mt-4">
+            <button class="btn btn-light text-danger fw-bold">
+                Xem tất cả <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</div>
